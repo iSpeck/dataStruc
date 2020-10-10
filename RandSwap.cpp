@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 /* Your function should work for int vectors v of any 
@@ -11,11 +12,20 @@ element of v down to 1, a random integer r ranging from 0 to i is generated.
 
 
 int main(int argc, char const *argv[]){
-int v[] = {1,2,3,4,5,6,7,8,9,10};
-for (int i = 0; i <= 10; i++ ){
+    int cards[] = {1,2,3,4,5,6,7,8,9,10};
+    vector<int> v;
+    v.assign(cards,cards+10);
+for (int i = 9; i >= 0; i--){
+    cout <<"Vector before swap: " << v[i]<< endl;
+    int r = rand()% (i+1);
+
+    swap(v[i],r);
+
+   // cout << "Random Int:" << r <<endl;
+    //cout << "\n";
     
-    cout << v[i] << endl;
-    
+    cout << "Vector swapped: " << v[i] << endl;
+    cout << "----------------" << endl;
 }
 
 
