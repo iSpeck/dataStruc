@@ -8,7 +8,7 @@ using namespace std;
 int main () {
   string line; //grabs each line of txt
   regex reg("\\t(.*)"); // parses the string using the tab delimeter
-   int ASCII[127]={}; 
+   int ASCII[127]={}; //sets an array for the ascii values
   
   
   ifstream myfile ("bible-psalms.txt"); //opens txt

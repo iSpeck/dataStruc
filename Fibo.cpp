@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class Progression{
+class Progression{ //class from textbook
     public: 
         Progression(long f = 0)
         :first(f),cur(f){}

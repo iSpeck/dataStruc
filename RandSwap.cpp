@@ -11,7 +11,7 @@ element of v down to 1, a random integer r ranging from 0 to i is generated.
  The function rand returns a random integer, 
  and we use the fact that rand()%(i+1) generates a random number between 0 and i. */
 
-void cardNumber(int card){
+void cardNumber(int card){ 
 
         vector<int> v; //declares a vector
     
