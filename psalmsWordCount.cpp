@@ -22,8 +22,9 @@ int main(){
   regex reg("\\w+[A-Za-z]"); // parses the string using the tab delimeter
   vector <string> wordList; //declares the vector that will hold all the words
   vector <int> wordCount;  //declares the vector that will hold the count
+  int count = 0;
   
-  ifstream myfile ("bible-test.txt"); //opens txt file
+  ifstream myfile ("bible-psalms.txt"); //opens txt file
   if (myfile.is_open())
   {
     while (getline(myfile,line)) //goes throught the file line by line
@@ -53,9 +54,11 @@ int main(){
 
     }//while loop for the line
     for (int i = 0; i <= wordList.size(); i++){
+      count++;
       cout << wordList[i] << ": appears " << wordCount[i] << " times."<<endl;
     }
 
+      cout << "Total amount of words is: " << count << endl;
 
   
    
